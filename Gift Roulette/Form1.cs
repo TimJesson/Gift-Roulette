@@ -91,8 +91,6 @@ namespace Gift_Roulette
                     pbGift.Image = Gift_Roulette.Resource1.Gift;
                 }
             }
-            
-            
 
             if (myGifts.count == myGifts.Bomb | myGifts.clickCounter == 0)
             //Open button used to hit bomb (player loses)
@@ -137,8 +135,6 @@ namespace Gift_Roulette
                 }
             }
 
-            
-
                 if (myGifts.count == myGifts.Bomb)
                 //button pressed to pass the bomb.( Player Wins )
                 {
@@ -167,9 +163,6 @@ namespace Gift_Roulette
                 btnReset.Enabled = true;
 
             }
-           
-
-           
 
             if (myGifts.clickCounter == 0 && myGifts.count != myGifts.Bomb) 
                 //player only has two chances to pass
@@ -180,9 +173,10 @@ namespace Gift_Roulette
             }
             
         }
-
+        /// <summary>
+        /// Resets everything (buttons, labels, counts and picture boxes)
+        /// </summary>
         void Reset()
-        //resets Everything (buttons, labels, counts and picture boxes)
         {
            
 
@@ -202,8 +196,10 @@ namespace Gift_Roulette
             stopSound();
         }
 
+        /// <summary>
+        /// Makes the slow clap picture box close after it has played
+        /// </summary>
         public async void SlowClap() 
-            //Makes the slow clap picture box close after it has played
         {
             pbSlowClap.Visible = true;
 
@@ -213,7 +209,7 @@ namespace Gift_Roulette
 
         }
 
-        //Methods for the sounds to play
+        //These will make sounds play
         private void playExplosion()   
         {
             SoundPlayer Explosion = new SoundPlayer(Resource1.Explosion1);
@@ -245,9 +241,10 @@ namespace Gift_Roulette
             SoundPlayer Shuffling = new SoundPlayer(Resource1.Shuffling);
             Shuffling.Play();
         }
-        
+        /// <summary>
+        /// Sound will stop
+        /// </summary>
         private void stopSound()
-            //method for the sound to stop
         {
             SoundPlayer Sound = new SoundPlayer();
             Sound.Stop();

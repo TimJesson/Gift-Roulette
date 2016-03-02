@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gift Roulette", "Gift Roulette\Gift Roulette.csproj", "{8583E24A-0CAA-4907-9A53-29DFF53B7732}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestProject1", "UnitTestProject1\UnitTestProject1.csproj", "{491DAE4E-BD41-4D99-9FDA-8DC02D5DAD8A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8583E24A-0CAA-4907-9A53-29DFF53B7732}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8583E24A-0CAA-4907-9A53-29DFF53B7732}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8583E24A-0CAA-4907-9A53-29DFF53B7732}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8583E24A-0CAA-4907-9A53-29DFF53B7732}.Release|Any CPU.Build.0 = Release|Any CPU
+		{491DAE4E-BD41-4D99-9FDA-8DC02D5DAD8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{491DAE4E-BD41-4D99-9FDA-8DC02D5DAD8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{491DAE4E-BD41-4D99-9FDA-8DC02D5DAD8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{491DAE4E-BD41-4D99-9FDA-8DC02D5DAD8A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

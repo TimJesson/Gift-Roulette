@@ -9,15 +9,19 @@ namespace Gift_Roulette
     public class Gifts
     {
         
-        public int count = 0, clickCounter = 2;
+        public int count = 0, clickCounter = 2; 
 
-        public int lossCount = 0, winCount = 0;
+        public int lossCount = 0, winCount = 0; //win and loss count
 
         
         public int Bomb; // This holds the random number (The Bomb)
         public int randGen;
 
-        public int RandomNumber() // This method generates the random number
+        /// <summary>
+        /// // This generates the random number
+        /// </summary>
+        /// <returns></returns>
+        public int RandomNumber() 
        {
 
            int randGen =0;

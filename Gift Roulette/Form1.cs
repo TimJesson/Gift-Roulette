@@ -19,7 +19,7 @@ namespace Gift_Roulette
              InitializeComponent();
             this.Text = "Gift Roulette";
             
-            //turn these buttona off
+            //turn these buttons off
             btnOpen.Enabled = false;
             btnPass.Enabled = false;
             btnReset.Enabled = false;
@@ -49,8 +49,9 @@ namespace Gift_Roulette
         }
         private void btnShuffle_Click(object sender, EventArgs e)
         {
-            pbGift.Image = Gift_Roulette.Resource1.Shuffle;
             myGifts.Bomb = myGifts.RandomNumber();
+
+            pbGift.Image = Gift_Roulette.Resource1.Shuffle;
             playShuffling();
 
             btnOpen.Enabled = true;
@@ -99,7 +100,9 @@ namespace Gift_Roulette
 
                 pbGift.Image = Gift_Roulette.Resource1.Explosion;
                 playExplosion();
+
                 DialogResult result = MessageBox.Show("Oh NO! You opened the gift with the Bomb and lost all the money!");
+
                 pbWinLose.Image = Gift_Roulette.Resource1.TryAgain;
                 
 

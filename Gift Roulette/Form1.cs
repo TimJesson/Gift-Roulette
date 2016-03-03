@@ -19,7 +19,7 @@ namespace Gift_Roulette
              InitializeComponent();
             this.Text = "Gift Roulette";
             
-            //turn these buttons off
+            //Turn these buttons off
             btnOpen.Enabled = false;
             btnPass.Enabled = false;
             btnReset.Enabled = false;
@@ -27,7 +27,7 @@ namespace Gift_Roulette
         
         private void btnStartGame_Click(object sender, EventArgs e)
         {
-            //turn these buttons on
+            //Turn these buttons on
             btnShuffle.Visible = true;
             btnOpen.Visible = true;
             btnPass.Visible = true;
@@ -35,13 +35,14 @@ namespace Gift_Roulette
             pbGift.Visible = true;
             pbWinLose.Visible = true;
 
-            //turn these buttons off
+            //Turn these buttons off
             btnStartGame.Visible = false;
             btnHTP.Visible = false;
         }
 
+        //How to play the game
         private void btnHTP_Click(object sender, EventArgs e) 
-            //The rules of the game
+            
         {
             MessageBox.Show(
                 "First shuffle then open the presents to collect the money, but be careful because 1 of these 6 presents " +
@@ -79,8 +80,8 @@ namespace Gift_Roulette
             myGifts.count = myGifts.count + 1;
             lblTurn.Text = "Turn: " + myGifts.count;
 
+            //Open button used (No Bomb Hit)
             if (myGifts.count != myGifts.Bomb && myGifts.clickCounter != 0)
-                //Open button used (No Bomb Hit)
             {
                 playDing();
                 pbGift.Image = Gift_Roulette.Resource1.Money;
@@ -92,9 +93,9 @@ namespace Gift_Roulette
                     pbGift.Image = Gift_Roulette.Resource1.Gift;
                 }
             }
-
-            if (myGifts.count == myGifts.Bomb | myGifts.clickCounter == 0)
+            
             //Open button used to hit bomb (player loses)
+            if (myGifts.count == myGifts.Bomb | myGifts.clickCounter == 0)
             {
                 myGifts.lossCount = myGifts.lossCount + 1;
 
@@ -124,11 +125,10 @@ namespace Gift_Roulette
 
             lblPasses.Text = "Passes Left: " + myGifts.clickCounter;
             lblTurn.Text = "Turn: " + myGifts.count;
-
+            
+            //Button pressed to pass the money
             if (myGifts.count != myGifts.Bomb)
-                //Button pressed to pass the money
-
-            {
+              {
                 pbGift.Image = Gift_Roulette.Resource1.Money;
                 playSad();
                 DialogResult result = MessageBox.Show("Unlucky, you passed up some money!");
@@ -137,10 +137,10 @@ namespace Gift_Roulette
                     pbGift.Image = Gift_Roulette.Resource1.Gift;
                 }
             }
-
-                if (myGifts.count == myGifts.Bomb)
-                //button pressed to pass the bomb.( Player Wins )
-                {
+           
+            //Button pressed to pass the bomb.( Player Wins )
+            if (myGifts.count == myGifts.Bomb)
+                 {
                     myGifts.winCount = myGifts.winCount + 1;
                 pbGift.Image = Gift_Roulette.Resource1.Bomb;
                 pbSlowClap.Image = Gift_Roulette.Resource1.SlowClap;
